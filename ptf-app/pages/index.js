@@ -2,6 +2,8 @@ import Head from 'next/head'
 import { BsMoonStarsFill } from 'react-icons/bs';
 import { AiFillTwitterCircle,AiFillYoutube,AiFillLinkedin} from 'react-icons/ai';
 import { FaTiktok} from 'react-icons/fa'
+import Image from "next/image";
+import dev from "../public/dev-ed-wave.png"
 
 export default function Home() {
   return (
@@ -36,14 +38,21 @@ export default function Home() {
             <h3 className='text-xl py-2'>Web develeper and Growth Hacker</h3>
             <p className='text-md py-5 leading-8 text-gray-800'>Freelancer providing services for web programming web marketing and growth aquisition.</p>
             <p>Join me down below to step up your business to the next level</p>
-          </div>
           <div className='text-5xl flex justify-center gap-16 py-3 text-gray-600'>
             <AiFillTwitterCircle />
             <AiFillYoutube />
             <AiFillLinkedin />
             <FaTiktok />
           </div>
+
+          {/*Image*/}
+          <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-20 md:h-96 md:w-96">
+              <Image src={dev} layout="fill" objectFit="cover" />
+            </div>
+          </div>
         </section>
+
+
       </main>
     </div>
   );
